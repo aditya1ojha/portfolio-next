@@ -10,7 +10,7 @@ type Props = {
 
 function ExperienceCard({experiences}: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[320px] md:w-[600px] snap-center bg-[#5e548e] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img
             initial={{
                 y:-100,
@@ -26,14 +26,15 @@ function ExperienceCard({experiences}: Props) {
             viewport={{
                 once:true,
             }}
-            className='w-16 h-16 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center'
+            className='w-16 h-16  xl:w-[150px] xl:h-[150px] rounded-full object-cover object-center'
             src={urlFor(experiences?.companyImage).url()}
             alt=''
         />
 
         <div className='px-0 md:px-10'>
-            <h4 className='text-4xl font-light'>{experiences.jobTitle}</h4>
-            <p className='font-bold text-2xl mt-1'>{experiences.company}</p>
+            <h4 className='text-xl
+        sm:text-4xl font-light pb-2'>{experiences.jobTitle}</h4>
+            <p className='font-bold break-words md:text-2xl mt-1'>{experiences.company}</p>
             <div className='flex space-x-2 my-2'>
             {experiences.technologies.map((technology) => (
                         <img
@@ -49,8 +50,8 @@ function ExperienceCard({experiences}: Props) {
                         ? "Present"
                         : new Date(experiences.dateEnded).toDateString()}
             </p>
-
-            <ul className='list-disc space-y-4 ml-5 h-24 text-lg overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20  scrollbar-thumb-[#F7AB0A]/80'>  {/* space is used for controlling the space between child elements */}
+            
+            <ul className='list-disc space-y-4 ml-5 h-24 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20  scrollbar-thumb-[#be95c4]/80'>  {/* space is used for controlling the space between child elements */}
                 {experiences.points.map((point, i) => (
                         <li key={i}>{point}</li>
                     ))}

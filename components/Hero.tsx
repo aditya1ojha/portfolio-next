@@ -26,18 +26,18 @@ function Hero({ pageInfo }: Props) {
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles/>
         <img 
-        className='relative rounded-full h-32 w-32 mx-auto object-cover'
+        className='relative rounded-full h-32 w-32 mx-auto object-cover shadow-lg shadow-[#be95c4]'
         src= {urlFor(pageInfo?.heroImage).url()}
         alt=''
         />
         <div className='z-20'>
-            <h2 className='test-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo?.role}</h2>
+            <h2 className='test-sm uppercase text-[#be95c4] pb-2 tracking-[15px]'>{pageInfo?.role}</h2>
             <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
                 <span className='mr-3'>{text}</span>
-                <Cursor cursorColor='#F7AB0A'/>
+                <Cursor cursorColor='#be95c4'/>
             </h1>
 
-        <div>
+        <div className='mt-8'>
             <Link href='#about'>
                 <button className='heroButton'>About</button>
             </Link>

@@ -33,7 +33,7 @@ function Header({ socials }: Props) {
                 <SocialIcon 
                 key = {social._id}
                 url = {social.url}
-                fgColor='gray'
+                fgColor='#be95c4'
                 bgColor='transparent'
             />
             ))}
@@ -62,10 +62,10 @@ function Header({ socials }: Props) {
             <SocialIcon
                 className='cursor-pointer'
                 network='email'
-                fgColor='gray'
+                fgColor='#be95c4'
                 bgColor='transparent'
             />
-            <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
+            <p className='uppercase hidden md:inline-flex text-sm text-[#be95c4]'>Get In Touch</p>
         </motion.div>
     </header>
   )
