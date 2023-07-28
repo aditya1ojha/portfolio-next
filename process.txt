@@ -1,0 +1,11 @@
+Libraries used:
+
+- Tailwind css
+- React social icons
+- Framer motion
+- React simple tyewriter
+- Heroicons
+- React Hooks Form
+- Tailwind scrollbar
+
+- Next Sanity
