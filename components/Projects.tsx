@@ -22,20 +22,20 @@ function Projects({projects}: Props) {
             duration:1.5,
         }}
         className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-[#be95c4] text-2xl">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#be95c4]/80">
 
         {projects.map((project, i) => (
           <div 
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 pt-40 md:p-44 h-screen"
             >
             <motion.img
                 initial={{
-                    y:-300,
+                    y:-200,
                     opacity:0,
                 }}    
                 transition={{
@@ -50,12 +50,12 @@ function Projects({projects}: Props) {
                 }}
                 src={urlFor(project?.image).url()}
                 alt=""
-                className="w-32 md:w-48 xl:w-64"
+                className="w-28 md:w-48 xl:w-64 shadow-md shadow-[#be95c4]"
             />
 
             <div className="space-y-10 px-0 md:px-10 mx-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
+                <span className="underline decoration-[#be95c4]/50">
                   Project {i + 1} of {projects.length}:
                 </span>{" "}
                   {project?.title}
@@ -81,7 +81,7 @@ function Projects({projects}: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[300px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] bg-[#5e548e]/10 left-0 h-[300px] -skew-y-12" />
     </motion.div>
   );
 }

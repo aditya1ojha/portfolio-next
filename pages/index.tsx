@@ -30,7 +30,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => { //destructuring
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'> {/* The parent should be snap-y and snap-mandatory and the child should be snap-center */}
+    <div className='bg-[#231942] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#be95c4]/80'> {/* The parent should be snap-y and snap-mandatory and the child should be snap-center */}
       <Head>
         <title>Aditya Ojha - Portfolio</title>
       </Head>
@@ -69,15 +69,17 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => { 
       </section>
 
       {/* Footer */}
-      <Link href='#hero'>
-        <footer className='sticky bottom-5 w-full cursor-pointer'>
+      
+        <footer className='sticky bottom-5 w-full'>
           <div className='flex items-center justify-center'>
+          <Link href='#hero'>
             <img
             className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
             src='https://lh3.googleusercontent.com/pw/AIL4fc-7wvKxaqMkcKTLL_wmkZOc2Q_7kLZjfriAZIbrOS1-44g4g0MFm6IhRa5ZbfB55Ch8Mhu1EZPMnw9PoBdIyKJcJ5mcrg2TP-d8Y7CXUhlyRg3rB9mGfwGk5W7wBiXo0i5sZ7p3LimDz8ecK-FOJL5J=w858-h938-s-no' alt=''/>
+                  </Link>
+
           </div>
         </footer>
-      </Link>
     </div>
   )
 }

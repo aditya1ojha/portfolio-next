@@ -11,10 +11,10 @@ type Props = {
 
 function SkillsIndividual({ skills, directionLeft }: Props) {
   return (
-    <div className='group relative flex cursor-pointer'>
+    <div className='group relative flex cursor-pointer z-10'>
         <motion.img
             initial={{
-                x: directionLeft ? -200 : 200,
+                x: directionLeft ? -100 : 100,
             }}
             transition={{
                 duration:1,
@@ -25,13 +25,13 @@ function SkillsIndividual({ skills, directionLeft }: Props) {
             }}
             src={urlFor(skills?.image).url()}
             alt=''
-            className='rounded-full border border-gray-500 object-cover w-16 h-16 xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out'
+            className='rounded-full border border-gray-500 object-fill w-12 h-12 xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out'
     
         />
 
-        <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-16 h-16 xl:w-20 xl:h-20 rounded-full z-0'>
+        <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-12 w-12 xl:w-20 xl:h-20 rounded-full z-0'>
             <div className='flex items-center justify-center h-full'>
-                <p className='text-xl font-bold text-black opacity-100'>{skills.progress}%</p>
+                <p className='md:text-xl font-bold text-black opacity-100'>{skills.progress}%</p>
             </div>
         </div>
 
