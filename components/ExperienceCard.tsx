@@ -10,7 +10,7 @@ type Props = {
 
 function ExperienceCard({experiences}: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[320px] md:w-[600px] snap-center bg-[#5e548e] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[320px] md:w-[600px] snap-center bg-[#5e548e] p-10 hover:opacity-60 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img
             initial={{
                 y:-100,
@@ -35,7 +35,7 @@ function ExperienceCard({experiences}: Props) {
             <h4 className='text-xl
         sm:text-4xl font-light pb-2'>{experiences.jobTitle}</h4>
             <p className='font-bold break-words md:text-2xl mt-1'>{experiences.company}</p>
-            <div className='flex space-x-2 my-2'>
+            {/* <div className='flex space-x-2 my-2'>
             {experiences.technologies.map((technology) => (
                         <img
                             key={technology._id}
@@ -43,7 +43,7 @@ function ExperienceCard({experiences}: Props) {
                             src={urlFor(technology.image).url()}
                         />
                     ))}
-            </div>
+            </div> */}
             <p className='uppercase py-5 text-gray-300'>
             {new Date(experiences.dateStarted).toDateString()} -{" "}
                     {experiences.isCurrentlyWorkingHere
