@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from 'framer-motion'
 import { Project } from "../typings";
 import { urlFor } from "@/sanity";
-
+import { SocialIcon } from "react-social-icons";
 
 type Props = {
   projects: Project[];
@@ -61,7 +61,7 @@ function Projects({projects}: Props) {
                   {project?.title}
               </h4>
 
-              <div className="flex items-center space-x-2 justify-center">
+              {/* <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
                   <img
                     className="h-8 w-8"
@@ -70,6 +70,16 @@ function Projects({projects}: Props) {
                     alt=''
                   />
                 ))}
+              </div> */}
+
+              <div className="h-8 w-8">
+                <SocialIcon
+                  key = {project?.linkToBuild}
+                  url = {project?.linkToBuild}
+                  fgColor='#be95c4'
+                  bgColor='transparent'
+                />
+
               </div>
 
               <p className="text-lg text-center md:text-left">
