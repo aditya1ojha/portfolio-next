@@ -33,6 +33,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => { 
     <div className='bg-[#231942] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#be95c4]/80'> {/* The parent should be snap-y and snap-mandatory and the child should be snap-center */}
       <Head>
         <title>Aditya Ojha - Portfolio</title>
+        <link rel="icon" href="icons8-penguin-48.png" />
       </Head>
 
       {/* Header */}
@@ -74,7 +75,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => { 
           <div className='flex items-center justify-center'>
           <Link href='#hero'>
             <img
-            className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+            className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer z-30'
             src='https://lh3.googleusercontent.com/pw/AIL4fc-7wvKxaqMkcKTLL_wmkZOc2Q_7kLZjfriAZIbrOS1-44g4g0MFm6IhRa5ZbfB55Ch8Mhu1EZPMnw9PoBdIyKJcJ5mcrg2TP-d8Y7CXUhlyRg3rB9mGfwGk5W7wBiXo0i5sZ7p3LimDz8ecK-FOJL5J=w858-h938-s-no' alt=''/>
                   </Link>
 
